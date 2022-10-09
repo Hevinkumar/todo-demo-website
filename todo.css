@@ -1,0 +1,261 @@
+
+*{
+    font-family: "Sofia", sans-serif;
+    
+    
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: rgb(193, 226, 255);
+    width: 100%;
+    height: 200px;
+    transition: border 2s;
+
+}
+.header:hover{
+    /* border: 0px solid rgb(127, 193, 250); */
+    opacity: 0.7;
+}
+.heading {
+    /* background-color: azure; */
+    width: 100%;
+    padding: 25px 0px; 
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+
+
+}
+.input-section {
+    width:100%;
+
+    /* height: auto; */
+    /* background-color: red; */
+    text-align: center;
+    padding:20px 0px;
+
+}
+.input-section input{
+    cursor:auto;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+    /* margin-bottom: 25px; */
+    /* padding: 2px; */
+    
+    /* box-shadow: 2px 3px 3px rgb(50, 132, 248); */
+    font-weight: 600;
+    font-size: 20px;
+    overflow: hidden;
+}
+.input-section input:is(:focus){
+    box-shadow: 1px 1px 1px rgba(50, 132, 248,0.9);
+    border: 2px solid blue;
+    outline: none;
+    /* border: none; */
+
+} 
+.input-section button {
+    cursor: pointer;
+    width: 75px;
+    height: 35px;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 0px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    background-color: rgb(255, 0, 204);
+    border: none;
+    /* border: 2px solid rgb(255, 0, 204); */
+}
+.input-section button:hover{
+    /* background-color: rgb(255, 116, 227); */
+    background-color: rgb(6, 166, 6);
+}
+/* .input-section button:active{
+    background-color: green;
+    outline: none;
+} */
+.list-container{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+    justify-content: space-around;
+    align-items:flex-start;
+    padding: 0px;
+    /* background-color: rgb(156, 249, 248); */
+    width: 100%;
+    /* height: auto; */
+    
+}
+/* .list-container:hover{
+    border: 2px solid rgb(254, 254, 254);
+} */
+.list-container .todo-box{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border-top: 10px solid blue;
+    background-color: rgb(247, 241, 241);
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7) ;
+}
+.todo-box .title {
+    /* width: 100%; */
+    background-color: rgb(239, 184, 207);
+    text-align: left;
+    padding: 5px 0px;
+    padding-left: 5px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    overflow:auto;
+    /* height: max-content; */
+}
+.todo-box .description{
+
+    display:block;
+    background-color: rgb(247, 241, 241);
+    /* background-color: rgb(245, 245, 54); */
+    border:none ;
+    width: 98%;
+    height:100px;
+    padding: 5px 0px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    resize: none;
+    /* height: max-content; */
+
+}
+.todo-box .toggle{
+    
+    position: absolute;
+    display: block;
+    bottom: 0px; 
+    width:100%;
+    text-align: right;
+    padding: 10px 0px;
+    /* padding-left: 5px; */
+    font-weight: 700;
+    font-size: 40px;
+    
+}
+.toggle .icon-edit{
+    cursor: pointer;
+    text-align: right;
+    padding: 5px;
+    color: blue;
+    font-size: 20px;
+    
+} 
+.toggle .icon-delete{
+    cursor: pointer;
+    text-align: right;
+    padding: 5px;
+    color: red;
+    font-size: 20px;
+    
+} 
+.toggle .icon-click{
+    /* width: 2px;
+    height:2px; */
+    cursor: pointer;
+    text-align: left;
+    padding: 5px;
+    color: red;
+    font-size: 20px;
+
+}
+
+/*------------------------ Input form decoration part -----------------------------*/
+
+.model,.model1 {
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+
+}
+.model-content{
+    margin: 200px auto;
+    width: 40%;
+    border: 5px solid darkgrey;
+}
+h2,
+p {
+  margin: 0 0 20px 20px;
+  font-weight: 400;
+  color: #999;
+}
+.model-content .input-form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 2px 5px #f5f5f5;
+    background: #eee;
+}
+.model-content .input-div{ 
+    width:100%;
+
+}
+input,
+textarea {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    border: 1px solid #1c87c9;
+    outline: none;
+    resize: none;
+  }
+.input-form .submit-div{
+    display: flex;
+    justify-content: space-between;
+}
+/* .input-form .input-container{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: antiquewhite;
+} */
+.input-form .submit-btn {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    background: #1c87c9;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .input-form .cancel-btn {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background: #c9361c;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+  }

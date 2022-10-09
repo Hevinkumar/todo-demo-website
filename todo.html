@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-website</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="todo.css">
+
+</head>
+
+<body>
+    <main class="app">
+        <div class="header" id="header">
+            <div class="heading">To-Do list</div>
+            <div class="input-section">
+                <!-- <form action=""> -->
+                <!-- <input type="text" value="Enter the task"> -->
+                <button type="submit" class="add-btn" value="add">Add</button>
+                <!-- </form> -->
+            </div>
+        </div>
+        <div class="list-container" id="list-container">
+            <div class="todo-box">
+                <div class="title">Title</div>
+                <p class="description">Description</p>
+                <div class="toggle">
+                    <!-- <button class="icon-click">unfinish</button>
+                    <button class="icon-edit">edit</button>
+                    <button class="icon-delete">delete</button> -->
+                    <i type="submit" class=" uil-check icon-click" onclick="click_complete()"></i>
+                    <i class="uil-edit icon-edit"></i>
+                    <i class="uil-trash-alt icon-delete"></i>
+
+                </div>
+            </div>
+        </div>
+        <div class="model" id="model">
+            <div class="model-content">
+                <div class="input-form">
+                    <form id="newToDoForm" onsubmit="return createTask()">
+                        <h2>
+                            Enter your tasks...
+                        </h2>
+                        <div class="input-div">
+                            <label for="todo-title">Task name</label>
+                            <input type="text" class="todo-title" id="todo-title" placeholder="Task name" value="">
+                        </div>
+                        <div class="input-div">
+                            <label for="todo-description">Task description</label>
+                            <textarea type="text" class="todo-description" id="todo-description"
+                                placeholder="about task" value=""></textarea>
+                        </div>
+                        <div class="submit-div">
+                            <button class="submit-btn" type="submit">Submit</button>
+                            <a type="button" class="cancel-btn close">Cancel</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="model1" id="model1">
+            <div class="model-content">
+                <div class="input-form">
+                    <form id="newToDoForm" action="">
+                        <h2>
+                            Update your task...
+                        </h2>
+                        <div class="input-container">
+                            <div class="input-div">
+                                <label for="todo-title">Task name</label>
+                                <input type="text" class="todo-title" id="todo-title1" value="">
+                            </div>
+                            <div class="input-div">
+                                <label for="todo-description">Task description</label>
+                                <textarea type="text" class="todo-description" id="todo-description1"
+                                    placeholder="about task" value=""></textarea>
+                            </div>
+                        </div>
+                        <div class="submit-div">
+                            <button class="submit-btn" id="update-btn" type="submit">Submit</button>
+                            <button class="cancel-btn" type="">Cancel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="todo.js"></script>
+    <script src="task_manage.js"></script>
+</body>
+
+</html>
